@@ -6,6 +6,8 @@ var gulp = require('gulp'),
     buffer = require('vinyl-buffer'),
     rename = require('gulp-rename');
 
+gulp.task('default',['browserify','webpack-no-config','webpack-config'])
+
 gulp.task('browserify',function(){
     return browserify('./app/entry.js')
         .bundle()
